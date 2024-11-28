@@ -7,6 +7,20 @@
   </head>
   <body>
     <%- include("./include/navbar.ejs") %>
+    <div class="post-header container">
+        <div class="sider"></div>
+        <h1 class="center posts heading">Edit This post</h1>
+        <div class="new f aic jce"></div>
+      </div>
+      <div class="container">
+          <br /><br />
+          <p>User name: @<%= post.username %></p>
+          <p>User name: <%= post.id %></p>
+          <form method="post" class="new" action="/posts/<%= post.id %>?_method=PATCH">
+          <textarea name="content" id="content" required cols="60" rows="10" maxlength="1000"><%= post.content %></textarea><br /><br />
+          <button type="submit">Change</button>
+        </form>
+      </div>
     <%- include("./include/footer.ejs") %>
   </body>
 </html>

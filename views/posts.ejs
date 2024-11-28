@@ -24,7 +24,10 @@
           </div>
           <div class="wholecontent">
             <div class="bar">
-              <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
+              <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit </a>
+              <form method="post" action="posts/<%= post.id %>?_method=DELETE">
+              <button type="submit"> Delete </button>
+            </form>
             </div>
             <h2 class="username">
               @<%= post.username %>
