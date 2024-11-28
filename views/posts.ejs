@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <title>Posts</title>
+  </head>
+  <body>
+    <%- include("./include/navbar.ejs") %>
+    <div class="post-header">
+        <div class="sider"></div>
+        <h1 class="center posts heading">Posts</h1>
+        <div class="new">
+            <a href="/new">Creat</a>
+        </div>
+    </div>
+    <div class="container">
+      <div class="allposts">
+        <% for (const post of posts) {%>
+        <div class="post">
+          <div class="userdp"></div>
+          <div class="wholecontent">
+            <h2 class="username">
+              <%= post.userInfo.username %>
+              <sub>(<%= post.userInfo.gender %>)</sub>
+            </h2>
+            <h4 class="id">id: <%= post.userInfo.id %></h4>
+            <p class="content"><%=post.content%></p>
+          </div>
+        </div>
+        <%} %>
+      </div>
+      <%- include('./include/numbers.ejs') %>
+    </div>
+    <%- include("./include/footer.ejs") %>
+  </body>
+</html>
