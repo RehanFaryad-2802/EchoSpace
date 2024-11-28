@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Post in detail</title>
+  </head>
+  <body>
+    <%- include('./include/navbar') %>
+    <div class="image">
+      <img src="<%=post.imgageURL%>" alt="" />
+    </div>
+    <div class="container">
+      <div class="sider"></div>
+      <h1 class="center posts heading">
+        @<%= post.username %> <sub>(<%= post.gender %>)</sub>
+      </h1>
+      <div class="wholecontent">
+        <p class="userallcontent"><%= post.content %></p>
+        <h1 class="mt">Why Coding is an Essential Skill</h1>
+        <p>
+          Coding has become a cornerstone of the modern world, driving
+          innovation and powering technology. It allows individuals to
+          communicate with computers and create programs, websites, apps, and
+          more. Learning to code is not just for tech professionals; it is a
+          valuable skill for anyone looking to thrive in today's digital
+          landscape.
+        </p>
+
+        <h2>Benefits of Learning to Code</h2>
+        <ul>
+          <li>
+            <strong>Problem-Solving Skills:</strong> Coding teaches logical
+            thinking and how to approach problems systematically.
+          </li>
+          <li>
+            <strong>Career Opportunities:</strong> From web development to
+            artificial intelligence, coding opens doors to countless fields.
+          </li>
+          <li>
+            <strong>Creativity and Innovation:</strong> Build anything from
+            games to automation tools, expressing ideas in a practical way.
+          </li>
+          <li>
+            <strong>Adaptability:</strong> Coding helps you stay relevant in an
+            ever-evolving tech-driven world.
+          </li>
+        </ul>
+
+        <h2>Popular Programming Languages for Beginners</h2>
+        <ul>
+          <li>
+            <strong>Python:</strong> Easy to learn and widely used in various
+            fields.
+          </li>
+          <li><strong>JavaScript:</strong> Essential for web development.</li>
+          <li>
+            <strong>Java:</strong> Great for building robust applications.
+          </li>
+          <li>
+            <strong>C++:</strong> Ideal for learning the fundamentals of
+            programming and system design.
+          </li>
+        </ul>
+
+        <h2>Why Start Coding Today?</h2>
+        <ul>
+          <li>
+            Coding is accessible to everyone, with numerous free resources and
+            online courses available.
+          </li>
+          <li>It fosters critical thinking and enhances creativity.</li>
+          <li>
+            It’s a gateway to exciting projects and innovations that can make an
+            impact on the world.
+          </li>
+        </ul>
+      </div>
+      <div class="new f aic jce"></div>
+    </div>
+    <%- include('./include/footer') %>
+  </body>
+</html>

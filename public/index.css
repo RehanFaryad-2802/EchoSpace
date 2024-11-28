@@ -25,11 +25,6 @@
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #04aa6d;
-}
-
 /* Add a color to the active/current link */
 .topnav a {
   color: white;
@@ -145,23 +140,26 @@ body {
 }
 .posts.heading {
   font-size: 48px;
-  margin-top: 24px;
   font-weight: 600;
 }
 .allposts {
   display: flex;
   flex-wrap: wrap;
   row-gap: 20px;
-  justify-content: space-around;
+  column-gap: 10px  ;
+  justify-content: center;
 }
 .userdp {
   width: 100%;
-  padding: 6rem;
   background-color: #5a5a5a;
   border-radius: var(--post-corners);
 }
+.userdp img{
+    border-radius: var(--post-corners);
+    width: 100%;
+}
 .post {
-  flex: 0 0 33%;
+  flex: 0 0 30%;
   background-color: #333;
   border-radius: var(--post-corners);
 }
@@ -173,17 +171,129 @@ sub {
   font-size: 12px;
 }
 .id {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 100;
   margin: 10px 0;
   color: #bdbdbd;
 }
 .content {
-  color: #bdbdbd;
+  color: #ffffff;
   margin-top: 20px;
+  font-size: 20px;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 .username {
   font-size: 30px;
   color: #bdbdbd;
   margin-top: 20px;
+}
+.post-header {
+  display: flex;
+  margin-top: 24px;
+}
+.post-header > * {
+  flex: 0 0 33%;
+}
+.f {
+  display: flex;
+}
+.aic {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+.jce {
+  justify-content: end;
+}
+.fdc{flex-direction: column;}
+.new a {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #333;
+  border-radius: 5rem;
+  color: #f2f2f2    ;
+  display: inline-block;
+  padding: 10px 20px;
+}
+.space{
+    padding: 5rem;
+}
+.error h1{
+    font-size: 96px;
+}
+.userallcontent{
+    width: 50%;
+    word-break: break-all;
+    margin: 0 auto;
+}
+.image{
+    text-align: center;
+}
+.image img{
+    width: 100%;
+}
+.mt{
+    margin-top: 4rem;
+}
+h1, h2 {
+    color: #333;
+}
+ul {
+    margin-left: 20px;
+}
+li {
+    margin: 8px 0;
+}
+.anker{
+    display: block;
+}
+form.new {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto; /* Center the horizontally */
+}
+
+form.new input[type="text"], 
+form.new textarea, 
+form.new button {
+    width: 100%; /* Make inputs and buttons full-width */
+    margin-bottom: 15px; /* Add spacing between elements */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form.new input[type="radio"] {
+    margin-right: 5px; /* Space between radio buttons and labels */
+}
+
+form.new label {
+    font-size: 14px;
+    margin-right: 15px; /* Add spacing between radio groups */
+}
+
+form.new button {
+    background-color: #333; /* Green button */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form.new button:hover {
+    background-color: #1f1f1f; /* Darker green on hover */
+}
+
+form.new textarea {
+    resize: none; /* Prevent resizing of the textarea */
 }

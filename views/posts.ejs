@@ -8,25 +8,31 @@
   </head>
   <body>
     <%- include("./include/navbar.ejs") %>
-    <div class="post-header">
-        <div class="sider"></div>
-        <h1 class="center posts heading">Posts</h1>
-        <div class="new">
-            <a href="/new">Creat</a>
-        </div>
+    <div class="post-header container">
+      <div class="sider"></div>
+      <h1 class="center posts heading">Posts</h1>
+      <div class="new f aic jce">
+        <a href="/posts/new">Creat +</a>
+      </div>
     </div>
     <div class="container">
       <div class="allposts">
         <% for (const post of posts) {%>
         <div class="post">
-          <div class="userdp"></div>
+          <div class="userdp">
+            <img src="<%= post.imgageURL %>" alt="" />
+          </div>
           <div class="wholecontent">
+            <div class="bar">
+              <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
+            </div>
             <h2 class="username">
-              <%= post.userInfo.username %>
-              <sub>(<%= post.userInfo.gender %>)</sub>
+              @<%= post.username %>
+              <sub>(<%= post.gender %>)</sub>
             </h2>
-            <h4 class="id">id: <%= post.userInfo.id %></h4>
+            <h4 class="id">id: <%= post.id %></h4>
             <p class="content"><%=post.content%></p>
+            <a href="http://localhost:8080/posts/<%= post.id %>">See more </a>
           </div>
         </div>
         <%} %>
